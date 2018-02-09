@@ -4,7 +4,7 @@ import { routerMiddleware } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import {rootReducer} from '../reducers';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
-import thunk from 'thunk';
+import thunk from 'redux-thunk';
 // import DevTools from './devTools';
 const history = createHistory();
 
@@ -18,8 +18,7 @@ const enchancer = compose(
 );
 
 const configureStore=(initialState) =>{
-	const store = createStore(rootReducer,initialState);
-	console.log('hello store***');
+	const store = createStore(rootReducer,initialState,enchancer);
 	
 	//Hot reload reducers
 
