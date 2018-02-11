@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Home from './index'
-import { genericActionCreator } from '../../actions'
+import { ajaxActionCreator } from '../../actions'
 
 const mapStateToProps = (state, ownProps) => {
 	console.log('state***',state);
@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
-		actioncreator: () => {
-			dispatch(genericActionCreator())
+		ajaxActionCreator: (...args) => {
+			dispatch(ajaxActionCreator(...args))
 		}
 	}
 }

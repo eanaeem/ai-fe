@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import initialState from './initialState'
+import { FILE_UPALOAD } from '../actions/consts';
+
 
 
 export const loading = (state = null, action) => {
@@ -8,8 +10,10 @@ export const loading = (state = null, action) => {
 	return loading? loading: false;
 }
 
-export const fileData =(state=initialState.title, action) => {
-	
+export const fileData =(state=initialState, action) => {
+	if(action.type===FILE_UPALOAD){
+		console.log('file upload', action.data);
+	}
 	return state;
 }
 
