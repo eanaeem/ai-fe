@@ -1,10 +1,12 @@
 import React from 'react'
+import {FooterHelp} from'@shopify/polaris';
+import {Link} from'react-router-dom';
 
-export const Footer = (props) => {
+
+const Footer = () => {
 	return(
-		<div>
-		</div>
+		<FooterHelp>Need help or got feedback? Visit our <Link to='/'>Help Centre</Link>, <Link to='/'>Contact us</Link> or just chat to us right here.</FooterHelp>
 	)
-}
+};
 
-export default Footer
+export default Footer;

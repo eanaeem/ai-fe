@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@shopify/polaris": "^1.11.0",
     "axios": "^0.17.1",
     "history": "^4.7.2",
     "nonce": "^1.0.4",
@@ -13,6 +14,8 @@
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
     "thunk": "0.0.1"
   },
   "scripts": {
